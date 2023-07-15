@@ -16,7 +16,7 @@ export default function Footer() {
           </p>
         </div>
         <div>
-          <span className="footer-title">Social</span>
+          <span className="footer-title">sosial media</span>
           <div className="grid grid-flow-col gap-4">
             <a href="#" style={{ color: "#FFF" }}>
               <TwIcon />

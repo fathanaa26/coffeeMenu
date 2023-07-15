@@ -43,11 +43,15 @@ export default function Hero() {
         className="hero min-h-screen"
         style={{ backgroundImage: `url(${data[count].imgurl})` }}
       >
-        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-overlay bg-opacity-70 bg-stone-800"></div>
         <div className="hero-content text-neutral-content">
           <div className="flex flex-col max-w-sm">
-            <h1 className="mb-5 text-5xl text-white">{data[count].title}</h1>
-            <p className="mb-5">{data[count].desc}</p>
+            <h1 className="mb-10 font-medium subpixel-antialiased text-6xl text-white">
+              {data[count].title}
+            </h1>
+            <p className="italic text-justify text-gray-300">
+              {data[count].desc}
+            </p>
           </div>
         </div>
       </div>
