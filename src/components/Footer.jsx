@@ -12,7 +12,9 @@ export default function Footer() {
           <p className="text-base subpixel-antialiased font-semibold text-zinc-300">
             CV. Ulfadz Engineering
             <br />
-            Bandung,
+            Jl. Cicukang Utara No.8, Kota Bandung
+            <br />
+            0896 8888 9999
           </p>
         </div>
         <div>

@@ -2,9 +2,23 @@ import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import hamMenu from "../assets/menu-hamburger-svgrepo-com.svg";
 import CompanyLogo from "../assets/company-logo.jsx";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const text = ["Projects", "Who are we ?", "Contact Us"];
+  const text = [
+    {
+      data: "Projects",
+      path: "/projects",
+    },
+    {
+      data: "Who are we ?",
+      path: "/aboutus",
+    },
+    {
+      data: "Contact us",
+      path: "/contactus",
+    },
+  ];
   const [toggle, setToggle] = useState(false);
 
   function menuHandle() {
@@ -15,13 +29,13 @@ export default function Navbar() {
 
   let jsx_showMenulist = text.map((e) => {
     return (
-      <a
-        key={e}
-        href="#"
+      <Link
+        to={e.path}
+        key={e.data}
         className="p-2 font-medium tracking-tight subpixel-antialiased text-sky-700 hover:underline underline-offset-4 decoration-2"
       >
-        {e}
-      </a>
+        {e.data}
+      </Link>
     );
   });
 
@@ -29,9 +43,9 @@ export default function Navbar() {
     <>
       <div className="px-14 py-8 navbar bg-zinc-200 ">
         <div className="flex-1">
-          <a href="#" className="text-zinc-600">
+          <Link to="/">
             <CompanyLogo />
-          </a>
+          </Link>
         </div>
         <div className="flex-none">
           {isMobile && (
