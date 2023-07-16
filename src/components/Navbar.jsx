@@ -4,7 +4,7 @@ import hamMenu from "../assets/menu-hamburger-svgrepo-com.svg";
 import CompanyLogo from "../assets/company-logo.jsx";
 
 export default function Navbar() {
-  const text = ["Jasa", "Kontak", "Tentang"];
+  const text = ["Projects", "Who are we ?", "Contact Us"];
   const [toggle, setToggle] = useState(false);
 
   function menuHandle() {
@@ -15,7 +15,11 @@ export default function Navbar() {
 
   let jsx_showMenulist = text.map((e) => {
     return (
-      <a key={e} href="#" className="p-3 text-sky-700">
+      <a
+        key={e}
+        href="#"
+        className="p-2 font-medium tracking-tight subpixel-antialiased text-sky-700 hover:underline underline-offset-4 decoration-2"
+      >
         {e}
       </a>
     );
@@ -23,7 +27,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="w-auto h-fit navbar bg-zinc-200 ">
+      <div className="px-14 py-8 navbar bg-zinc-200 ">
         <div className="flex-1">
           <a href="#" className="text-zinc-600">
             <CompanyLogo />
@@ -38,7 +42,7 @@ export default function Navbar() {
           {!isMobile && jsx_showMenulist}
         </div>
       </div>
-      <div className="bg-zinc-400 text-center flex flex-col">
+      <div className="bg-zinc-200 text-center flex flex-col">
         {toggle && jsx_showMenulist}
       </div>
     </>

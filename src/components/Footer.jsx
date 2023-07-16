@@ -6,13 +6,13 @@ import FbIcon from "../assets/fb-icon.jsx";
 export default function Footer() {
   return (
     <>
-      <footer className="footer p-10 bg-neutral text-neutral-content">
+      <footer className="footer px-20 py-10 bg-neutral text-neutral-content">
         <div>
           <CompanyLogo />
-          <p>
-            ACME Industries Ltd.
+          <p className="text-base subpixel-antialiased font-semibold text-zinc-300">
+            CV. Ulfadz Engineering
             <br />
-            Providing reliable tech since 1992
+            Bandung,
           </p>
         </div>
         <div>
