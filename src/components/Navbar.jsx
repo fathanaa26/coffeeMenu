@@ -12,7 +12,7 @@ export default function Navbar() {
     },
     {
       data: "Who are we ?",
-      path: "/aboutus",
+      path: "/about",
     },
     {
       data: "Contact us",

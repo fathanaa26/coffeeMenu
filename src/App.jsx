@@ -16,11 +16,19 @@ const firebaseConfig = {
   measurementId: "G-2N722SP6TG"
 };
 
+import SEO from "./components/SEO.jsx";
+
 export default function App() {
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   return (
     <div className="bg-zinc-200">
+      <SEO
+        title="Ulfadz Homepage"
+        desc="Soil Engineering dari Bandung Indonesia"
+        name="Ulfadz Engineering"
+        type=""
+      ></SEO>
       <Navbar />
       <Hero />
       <DummyFormInput />

@@ -20,7 +20,7 @@ const root_router = createBrowserRouter([
     element: <ContactPage />,
   },
   {
-    path: "/aboutus",
+    path: "/about",
     element: <AboutUsPage />,
   },
   {
